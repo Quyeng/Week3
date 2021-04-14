@@ -31,13 +31,6 @@ class Profile : AppCompatActivity() {
         tvPhoneNumber = findViewById(R.id.phonenum)
     }
 
-    private fun initInfo(user: Detail?) {
-        tvUserName.text = user?.fullName
-        tvFullName.text = user?.fullName
-        tvEmail.text = user?.email
-        tvPhoneNumber.text = user?.phoneNumber
-    }
-
     private fun setupAlertDialog(title: String, textHint: String, textView: TextView) {
         val view: View = LayoutInflater
             .from(this)
