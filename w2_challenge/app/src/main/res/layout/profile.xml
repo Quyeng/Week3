@@ -5,7 +5,7 @@
 
     <data>
         <variable
-            name="profile"
+            name="profileView"
             type="com.example.w2_challenge.Account" />
     </data>
 
@@ -53,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFFFFF"
-                android:text="@string/name"
+                android:text="@{profileView.username}"
                 android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFFFFF"
                 android:inputType="textEmailAddress"
-                android:text="@string/email"
+                android:text="@{profileView.email}"
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -120,7 +120,7 @@
             android:id="@+id/nametext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/eljad_eendaz"
+            android:text="@{profile.username}"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="bold"
