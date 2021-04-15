@@ -36,5 +36,20 @@
       <option name="name" value="D:\Sdk\extras\android\m2repository" />
       <option name="url" value="file:/D:/Sdk/extras/android/m2repository" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\m2repository" />
+      <option name="name" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\m2repository" />
+      <option name="url" value="file:/C:/Users/Win%2010/AppData/Local/Android/Sdk/extras/m2repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\android\m2repository" />
+      <option name="name" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\android\m2repository" />
+      <option name="url" value="file:/C:/Users/Win%2010/AppData/Local/Android/Sdk/extras/android/m2repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\google\m2repository" />
+      <option name="name" value="C:\Users\Win 10\AppData\Local\Android\Sdk\extras\google\m2repository" />
+      <option name="url" value="file:/C:/Users/Win%2010/AppData/Local/Android/Sdk/extras/google/m2repository" />
+    </remote-repository>
   </component>
 </project>

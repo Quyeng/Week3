@@ -5,6 +5,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b20a1084f65c8bdf3677323639231d2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b20a1084f65c8bdf3677323639231d2/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b20a1084f65c8bdf3677323639231d2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/01d30d015c3820aca6f8c942bea44f98/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ca260bdf4641901fd64fe403cef7539/vectordrawable-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ca260bdf4641901fd64fe403cef7539/vectordrawable-1.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

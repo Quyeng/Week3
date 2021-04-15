@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Asus\\Desktop\\w2_challenge\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "E:\\Android_Kolin_K17\\week3\\app\\Android1\\w2_challenge\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-2\\files-2.1\\4edee211c61c17d898304b82ede5f4ee\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\Win 10\\.gradle\\caches\\transforms-2\\files-2.1\\15b81656bb97f8f1ec02a1a357a0e65c\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

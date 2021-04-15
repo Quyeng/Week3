@@ -5,6 +5,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79518deb55517550054cbb57723c927a/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79518deb55517550054cbb57723c927a/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79518deb55517550054cbb57723c927a/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bd675d2c717f589b74a505e416b93924/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5b5bf032d8719485f1e892f637d41a2/cursoradapter-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c5b5bf032d8719485f1e892f637d41a2/cursoradapter-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
