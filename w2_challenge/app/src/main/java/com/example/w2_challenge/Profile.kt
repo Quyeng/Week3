@@ -1,101 +1,87 @@
 package com.example.w2_challenge
-
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import kotlinx.android.synthetic.main.profile.view.*
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.w2_challenge.databinding.ProfileBinding
-import kotlinx.android.synthetic.main.dialog.*
 
 
-class   Profile : AppCompatActivity() {
+class Profile : AppCompatActivity() {
+    private lateinit var binding: ProfileBinding
     private lateinit var viewmodel: ProfileViewModel
-    private lateinit var binding:ProfileBinding
+    private  lateinit var viewdodelFactory: ProfileViewModelFactory
+    private lateinit var accountDataStore: DataStore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.profile)
+        setupViewModelBinding()
 
-        findViewsById()
     }
 
-    private fun findViewsById() {
+    private fun setupViewModelBinding(){
         viewmodel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        binding = DataBindingUtil.setContentView(this, R.layout.profile)
+        viewdodelFactory = ProfileViewModelFactory(fullName = "",email = "",passWord = "")
+        accountDataStore = DataStore()
+
+        observeData()
 
     }
+    private fun observeData() {
 
-       /*private fun setupAlertDialog(title: String, textHint: String, textView: TextView) {
-        val view: View = LayoutInflater
-            .from(this)
-            .inflate(R.layout.dialog, null, false)
-        edtData = view.findViewById(R.id.edtdulieu)
-        edtData.setText(textView.text)
-        edtData.hint = textHint
-        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
-        builder.setView(view)
-            .setTitle(title)
-            .setPositiveButton("OK") { dialog, _ ->
-                textView.text = edtData.text
-                showToastMessage(edtData.text.toString())
-                dialog.dismiss()
+            accountDataStore.Account.asLiveData().observe(this, Observer {
+            binding.fname.text = it?.fullName
+            binding.emailbox.text = it?.email
+        })
+    }
+}
+
+
+       /* binding.apply {
+            val user = getUserFromBundle()
+            user?.let {
+                viewmodel.setupUserProfile(user.email)
+
             }
-            .setNegativeButton("CANCEL") { dialog, _ ->
-                dialog.dismiss()
-            }.show()
 
-    }*/
-       private fun setupAlertDialog(title: String, textHint: String, textView: TextView) {
-               binding = DataBindingUtil.inflate(
-                   LayoutInflater.from(),
-                   R.layout.dialog,
-                   null,
-                   false
-               )
-               setContentView(binding.root)
+            tvFullName.setOnClickListener {
+                setupAlertDialog("Edit Full Name", "Enter your full name",tvFullName.text.toString(),object:EditDialog.EditDialogCallback {
+                    override fun onConfirmClicked(data: String) {
+                        viewmodel.editFullNameUser(user!!.email,data)
+                        showToastMessage(data)
+                    }
+                })
+            }
+            tvEmail.setOnClickListener {
+                setupAlertDialog("Edit E-mail ", "Enter your e-mail",tvEmail.text.toString(),object :EditDialog.EditDialogCallback {
+                    override fun onConfirmClicked(data: String) {
+                        viewmodel.editEmailUser(user!!.email,data)
+                        showToastMessage(data)
 
-
-               binding.apply {
-                   til_base.text = title
-                  edtdulieu.setText()
-                   edtdulieu.hint = hint
-                   btnCancel.setOnClickListener {
-                       dismiss()
-                   }
-                   btnConfirm.setOnClickListener {
-                       editDialogCallback.onConfirmClicked(edtdulieu.text.toString())
-                       dismiss()
-                   }
-               }
-           }
-
-           fun setEditDialogCallback(editDialogCallback: EditDialogCallback) {
-               this.editDialogCallback = editDialogCallback
-           }
-
-           interface EditDialogCallback {
-               fun onConfirmClicked(data: String)
-           }
-       }
-
-    private fun editInfo() {
-        tvFullName.setOnClickListener {
-            setupAlertDialog("Edit full name", "Enter your full name", tvFullName)
-        }
-
-        tvEmail.setOnClickListener {
-            setupAlertDialog("Edit e-mail ", "Enter your e-mail", tvEmail)
-        }
-
-        tvPhoneNumber.setOnClickListener {
-            setupAlertDialog("Edit phone number ", "Enter your phone number", tvPhoneNumber)
+                    }
+                })
+            }
+            tvPhoneNumber.setOnClickListener {
+                setupAlertDialog("Edit Phone Number ", "Enter your phone number",tvPhoneNumber.text.toString(),object :EditDialog.EditDialogCallback {
+                    override fun onConfirmClicked(data: String) {
+                        viewmodel.editPhoneNumberUser(user!!.email,data)
+                        showToastMessage(data)
+                    }
+                })
+            }
         }
     }
+
+
+    private fun setupAlertDialog(title: String, textHint: String,initData:String,editDialogCallback: EditDialog.EditDialogCallback) {
+        val dialog = EditDialog(this,title,textHint,initData)
+        dialog.setEditDialogCallback(editDialogCallback)
+        dialog.show()
+            }
 
     private fun showToastMessage(message:String){
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 }
+*/
