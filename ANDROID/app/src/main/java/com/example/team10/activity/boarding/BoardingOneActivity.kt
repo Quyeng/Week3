@@ -8,9 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.team10.R
 
 
-/**
- * Created by Viet Hua on 04/03/2021.
- */
+
 
 class BoardingOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
